@@ -1,0 +1,6 @@
+@use 'components/background';
+
+body {
+  background-color: var(--primary);
+  color: red;
+}

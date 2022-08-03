@@ -1,0 +1,12 @@
+{
+  "name": "@devolutions/websites",
+  "workspaces": [
+    "packages/cms",
+    "packages/sysadminotaur"
+  ],
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1"
+  }
+}

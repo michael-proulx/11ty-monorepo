@@ -1,0 +1,12 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+ij_html_do_not_indent_children_of_tags = none
+ij_html_quote_style = double
+ij_javascript_use_double_quotes = false
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true

@@ -1,0 +1,16 @@
+{
+  "name": "@devolutions/websites-cms",
+  "description": "CMS Website",
+  "author": "Devolutions",
+  "keywords": [
+    "CMS",
+    "websites",
+    "11ty"
+  ],
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "1.0.1"
+  }
+}
