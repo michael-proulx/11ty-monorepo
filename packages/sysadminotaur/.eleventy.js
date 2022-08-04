@@ -1,7 +1,7 @@
-const eleventySass = require('../utils/eleventy-sass');
+// const eleventySass = require('../utils/eleventy-sass');
 
 module.exports = function eleventyConfig(eleventyConfig) {
-  eleventyConfig.addPlugin(eleventySass);
+  // eleventyConfig.addPlugin(eleventySass);
 
   return {
     dir: {
