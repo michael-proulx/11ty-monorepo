@@ -1,5 +1,8 @@
 {
   "name": "@devolutions/websites",
+  "description": "Devolutions's Websites",
+  "author": "Devolutions",
+  "private": true,
   "workspaces": [
     "packages/cms",
     "packages/sysadminotaur"
