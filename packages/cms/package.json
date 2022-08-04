@@ -7,8 +7,11 @@
     "websites",
     "11ty"
   ],
+  "private": true,
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "cms:build": "npx @11ty/eleventy",
+    "cms:serve": "npx @11ty/eleventy --serve",
+    "cms:proxy-server": "SET PORT=8082 && npx netlify-cms-proxy-server"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.1"
