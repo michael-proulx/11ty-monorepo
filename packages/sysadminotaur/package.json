@@ -9,8 +9,8 @@
   ],
   "private": true,
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "sysadminotaur:build": "npx @11ty/eleventy",
+    "sysadminotaur:serve": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
     "@11ty/eleventy": "1.0.1",
