@@ -1,7 +1,8 @@
 const sass = require('sass');
 const path = require('path');
+const fs = require('fs');
 
-module.exports = (eleventyConfig, options = {}) => {
+module.exports = (eleventyConfig) => {
   eleventyConfig.addTemplateFormats('scss');
 
   eleventyConfig.addExtension('scss', {
@@ -16,19 +17,35 @@ module.exports = (eleventyConfig, options = {}) => {
       const result = sass.compileString(inputContent, {
         style: 'compressed',
         sourceMap: true,
+        sourceMapIncludeSources: true,
         loadPaths: [
           parsed.dir || '.',
           this.config.dir.includes
         ]
       });
 
+      const sm = JSON.stringify(result.sourceMap);
+      const smBase64 = (Buffer.from(sm, 'utf-8') || '').toString('base64');
+      const smComment = '/*# sourceMappingURL=data:application/json;charset=utf-8;base64,' + smBase64 + ' */'
+
+      const css = result.css.toString() + '\n'.repeat(2) + smComment;
+
+      console.log('css', css)
+
+      // const sassMapFile = `${inputPath.replace(this.config.dir.input, this.config.dir.output).replace('.scss', '.css')}.map`;
+
+      // fs.promises.mkdir(path.parse(sassMapFile).dir, { recursive: true }, (err) => {
+      //   if (err) throw err;
+      // }).then(
+      //   () => fs.promises.writeFile(sassMapFile, JSON.stringify(result.sourceMap))
+      // );
+
       return () => {
-        return result.css;
+        return css;
       };
     },
     compileOptions: {
       cache: false
     }
   });
-
 }
