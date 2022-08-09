@@ -1,8 +1,7 @@
-const sass = require('sass');
 const path = require('path');
-const fs = require('fs');
+// const fs = require('fs');
 
-module.exports = (eleventyConfig) => {
+module.exports = (eleventyConfig, sass) => {
   eleventyConfig.addTemplateFormats('scss');
 
   eleventyConfig.addExtension('scss', {
