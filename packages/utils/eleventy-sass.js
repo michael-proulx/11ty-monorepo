@@ -29,8 +29,6 @@ module.exports = (eleventyConfig, sass) => {
 
       const css = result.css.toString() + '\n'.repeat(2) + smComment;
 
-      console.log('css', css)
-
       // const sassMapFile = `${inputPath.replace(this.config.dir.input, this.config.dir.output).replace('.scss', '.css')}.map`;
 
       // fs.promises.mkdir(path.parse(sassMapFile).dir, { recursive: true }, (err) => {
