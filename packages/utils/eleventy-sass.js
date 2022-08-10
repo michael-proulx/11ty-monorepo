@@ -1,7 +1,8 @@
 const path = require('path');
+const sass = require('sass');
 // const fs = require('fs');
 
-module.exports = (eleventyConfig, sass) => {
+module.exports = (eleventyConfig) => {
   eleventyConfig.addTemplateFormats('scss');
 
   eleventyConfig.addExtension('scss', {
@@ -28,6 +29,8 @@ module.exports = (eleventyConfig, sass) => {
       const smComment = '/*# sourceMappingURL=data:application/json;charset=utf-8;base64,' + smBase64 + ' */'
 
       const css = result.css.toString() + '\n'.repeat(2) + smComment;
+
+      console.log('css', css)
 
       // const sassMapFile = `${inputPath.replace(this.config.dir.input, this.config.dir.output).replace('.scss', '.css')}.map`;
 
